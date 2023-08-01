@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quote_app/gen/assets.gen.dart';
+import 'package:quote_app/presentation/sign_pages/sign_page.dart';
 import 'package:quote_app/presentation/splash/splashscreen.dart';
 import 'package:quote_app/presentation/ui_resources/custom_colors.dart';
 import 'package:json_theme/json_theme.dart';
@@ -48,8 +49,7 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(
-          nextScreen: MyHomePage(title: 'Flutter Demo Home Page')),
+      home: const SplashScreen(nextScreen: SignPage()),
     );
   }
 }
