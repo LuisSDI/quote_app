@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:quote_app/presentation/ui_resources/custom_colors.dart';
 import 'package:quote_app/presentation/ui_resources/size_config.dart';
+import 'package:quote_app/presentation/widgets/custom_textfield.dart';
 
 class SignInContent extends StatefulWidget {
   const SignInContent({super.key});
@@ -34,48 +35,25 @@ class SignInContentState extends State<SignInContent> {
           Container(
             margin: EdgeInsets.only(
                 top: SizeConfig.blockSizeHorizontal,
-                bottom: SizeConfig.blockSizeHorizontal * 5),
+                bottom: SizeConfig.blockSizeHorizontal),
             child: const Text(
               'Sign in to continue',
               style: TextStyle(fontSize: 20, color: darkColor),
             ),
           ),
           // Email TextField
-          Container(
-            width: SizeConfig.blockSizeHorizontal * 80,
-            // height: SizeConfig.blockSizeHorizontal * 5,
-            margin: EdgeInsets.only(bottom: SizeConfig.blockSizeHorizontal * 5),
-            child: TextFormField(
-              validator: (input) {
-                if (input!.isEmpty) {
-                  return 'Please type an email';
-                }
-                return null;
-              },
-              onSaved: (input) {},
-              style: const TextStyle(fontSize: 20, color: darkColor),
-              decoration: const InputDecoration(
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: darkColor,
-                    ),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                    color: darkColor,
-                  )),
-                  hintText: 'Email address',
-                  hintStyle: TextStyle(
-                    fontSize: 20,
-                    color: darkColor,
-                  )),
-            ),
+          CustomTextField(
+            hintText: 'Email address',
+            onSaved: (String? input) {},
+            validator: (String? input) {
+              if (input!.isEmpty) {
+                return 'Please type an email';
+              }
+              return null;
+            },
           ),
           // Password TextField
-          SizedBox(
-            width: SizeConfig.blockSizeHorizontal * 80,
-            // height: SizeConfig.blockSizeHorizontal * 5,
-            child: TextFormField(
+          CustomTextField(
               validator: (input) {
                 if (input!.length < 6) {
                   return 'Your password needs to be at least 6 characters';
@@ -83,22 +61,8 @@ class SignInContentState extends State<SignInContent> {
                 return null;
               },
               onSaved: (input) {},
-              obscureText: true,
-              style: const TextStyle(fontSize: 20, color: darkColor),
-              decoration: const InputDecoration(
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: darkColor,
-                    ),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                    color: darkColor,
-                  )),
-                  hintText: 'Password',
-                  hintStyle: TextStyle(fontSize: 20, color: darkColor)),
-            ),
-          ),
+              hintText: 'Password'),
+
           // Google Icon
           Row(
             children: <Widget>[
