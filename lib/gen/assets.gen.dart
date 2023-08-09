@@ -25,8 +25,16 @@ class $AssetsImagesGen {
   /// File path: assets/images/Q.png
   AssetGenImage get q => const AssetGenImage('assets/images/Q.png');
 
+  /// File path: assets/images/default_image.png
+  AssetGenImage get defaultImage =>
+      const AssetGenImage('assets/images/default_image.png');
+
+  /// File path: assets/images/happy_photo.png
+  AssetGenImage get happyPhoto =>
+      const AssetGenImage('assets/images/happy_photo.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [q];
+  List<AssetGenImage> get values => [q, defaultImage, happyPhoto];
 }
 
 class $AssetsThemeGen {

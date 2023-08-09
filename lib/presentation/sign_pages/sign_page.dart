@@ -155,7 +155,9 @@ class _SignPageState extends State<SignPage> {
                     bottom: SizeConfig.blockSizeHorizontal * 7.5,
                     right: SizeConfig.blockSizeHorizontal * 10,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushReplacementNamed(context, '/mainScreen');
+                      },
                       child: Container(
                         alignment: Alignment.center,
                         width: SizeConfig.blockSizeHorizontal * 15,
