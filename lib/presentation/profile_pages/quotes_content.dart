@@ -3,7 +3,8 @@ import 'package:quote_app/presentation/ui_resources/size_config.dart';
 import 'package:quote_app/presentation/widgets/quote_card.dart';
 
 class QuotesContent extends StatelessWidget {
-  const QuotesContent({super.key});
+  const QuotesContent({super.key, required this.isOtherProfile});
+  final bool isOtherProfile;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,9 @@ class QuotesContent extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Your Quotes',
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900),
+            Text(
+              isOtherProfile ? 'Username Quotes' : 'Your Quotes',
+              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900),
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,

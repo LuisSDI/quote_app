@@ -23,6 +23,7 @@ class _MainViewState extends State<MainView> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             InkWell(
+              onTap: () => Navigator.of(context).pushNamed('/edit_profile'),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(100),
                 child: Image.asset(

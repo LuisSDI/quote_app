@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quote_app/gen/assets.gen.dart';
 import 'package:quote_app/presentation/main_pages/main_view.dart';
+import 'package:quote_app/presentation/profile_pages/edit_profile_view.dart';
+import 'package:quote_app/presentation/profile_pages/other_profile_view.dart';
 import 'package:quote_app/presentation/sign_pages/sign_page.dart';
 import 'package:quote_app/presentation/splash/splashscreen.dart';
 import 'package:json_theme/json_theme.dart';
@@ -50,11 +52,14 @@ class MyApp extends StatelessWidget {
       // ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/splashScreen',
+
       routes: {
         '/signScreen': (context) => const SignPage(),
         '/mainScreen': (context) => const MainView(),
         '/splashScreen': (context) =>
             const SplashScreen(nextScreen: SignPage()),
+        '/other_profile': (context) => const OtherProfileView(),
+        '/edit_profile': (context) => const EditProfileView(),
       },
     );
   }

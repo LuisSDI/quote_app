@@ -80,7 +80,9 @@ class ProfileCard extends StatelessWidget {
                     radius: 25,
                     backgroundColor: whiteColor,
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/other_profile');
+                      },
                       icon: const Icon(
                         Ionicons.person,
                         color: darkColor,

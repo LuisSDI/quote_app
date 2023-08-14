@@ -5,7 +5,6 @@ import 'package:quote_app/presentation/profile_pages/follow_content.dart';
 import 'package:quote_app/presentation/profile_pages/quotes_content.dart';
 import 'package:quote_app/presentation/ui_resources/custom_colors.dart';
 import 'package:quote_app/presentation/ui_resources/size_config.dart';
-import 'package:quote_app/presentation/widgets/profile_card.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -21,8 +20,12 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     List<Widget> tabs = [
-      const AccountContent(),
-      const QuotesContent(),
+      const AccountContent(
+        isOtherProfile: false,
+      ),
+      const QuotesContent(
+        isOtherProfile: false,
+      ),
       const FollowContent()
     ];
     return Column(
