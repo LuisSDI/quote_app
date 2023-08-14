@@ -33,8 +33,52 @@ class $AssetsImagesGen {
   AssetGenImage get happyPhoto =>
       const AssetGenImage('assets/images/happy_photo.png');
 
+  /// File path: assets/images/image1.jpg
+  AssetGenImage get image1 => const AssetGenImage('assets/images/image1.jpg');
+
+  /// File path: assets/images/image10.png
+  AssetGenImage get image10 => const AssetGenImage('assets/images/image10.png');
+
+  /// File path: assets/images/image2.jpg
+  AssetGenImage get image2 => const AssetGenImage('assets/images/image2.jpg');
+
+  /// File path: assets/images/image3.jpg
+  AssetGenImage get image3 => const AssetGenImage('assets/images/image3.jpg');
+
+  /// File path: assets/images/image4.jpg
+  AssetGenImage get image4 => const AssetGenImage('assets/images/image4.jpg');
+
+  /// File path: assets/images/image5.jpg
+  AssetGenImage get image5 => const AssetGenImage('assets/images/image5.jpg');
+
+  /// File path: assets/images/image6.jpg
+  AssetGenImage get image6 => const AssetGenImage('assets/images/image6.jpg');
+
+  /// File path: assets/images/image7.jpg
+  AssetGenImage get image7 => const AssetGenImage('assets/images/image7.jpg');
+
+  /// File path: assets/images/image8.png
+  AssetGenImage get image8 => const AssetGenImage('assets/images/image8.png');
+
+  /// File path: assets/images/image9.png
+  AssetGenImage get image9 => const AssetGenImage('assets/images/image9.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [q, defaultImage, happyPhoto];
+  List<AssetGenImage> get values => [
+        q,
+        defaultImage,
+        happyPhoto,
+        image1,
+        image10,
+        image2,
+        image3,
+        image4,
+        image5,
+        image6,
+        image7,
+        image8,
+        image9
+      ];
 }
 
 class $AssetsThemeGen {

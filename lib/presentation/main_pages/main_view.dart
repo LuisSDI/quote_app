@@ -39,7 +39,9 @@ class _MainViewState extends State<MainView> {
               radius: 20,
               backgroundColor: whiteColor,
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/make_quote');
+                },
                 icon: const Icon(
                   Feather.edit_3,
                   color: darkColor,

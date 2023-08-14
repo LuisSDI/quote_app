@@ -6,6 +6,8 @@ import 'package:quote_app/gen/assets.gen.dart';
 import 'package:quote_app/presentation/main_pages/main_view.dart';
 import 'package:quote_app/presentation/profile_pages/edit_profile_view.dart';
 import 'package:quote_app/presentation/profile_pages/other_profile_view.dart';
+import 'package:quote_app/presentation/quote_pages/make_quote_view.dart';
+import 'package:quote_app/presentation/quote_pages/view_quote_view.dart';
 import 'package:quote_app/presentation/sign_pages/sign_page.dart';
 import 'package:quote_app/presentation/splash/splashscreen.dart';
 import 'package:json_theme/json_theme.dart';
@@ -60,6 +62,8 @@ class MyApp extends StatelessWidget {
             const SplashScreen(nextScreen: SignPage()),
         '/other_profile': (context) => const OtherProfileView(),
         '/edit_profile': (context) => const EditProfileView(),
+        '/make_quote': (context) => const MakeQuoteView(),
+        '/quoteScreen': (context) => const ViewQuoteView(),
       },
     );
   }
